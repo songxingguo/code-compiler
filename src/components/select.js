@@ -8,21 +8,15 @@ const props = {
         authorization: 'authorization-text',
     },
     onChange(info) {
-        alert("df");
-        if (info.file && info.file.length > 0) {
-            //下面这一句相当于JQuery的：var file =$("#upload").prop('files')[0];
-            var file = info.file;
-            if (window.FileReader) {
-                var reader = new FileReader();
-                reader.onloadend = function (evt) {
-                    if (evt.target.readyState == FileReader.DONE) {
-                        callback(evt.target.result);
-                    }
-                };
-                // 包含中文内容用gbk编码
-                reader.readAsText(file, 'gbk');
-            }
+        var reader = new FileReader();
+        console.log(info.file, info.fileList);
+        var file = info.file.originFileObj;
+
+        reader.onload = function(e) {
+            var text = reader.result;
+            console.log(text);
         }
+        reader.readAsText(file,'utf-8');
     }
 };
 

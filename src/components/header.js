@@ -20,12 +20,13 @@ class Header extends React.Component {
         <div id="components-layout-demo-fixed">
             <div className="logo" />
             <Menu mode="horizontal">
-                <Menu.Item>首页</Menu.Item>
-                <SubMenu title="读取源程序">
+                <SubMenu title="文件">
                     <Menu.Item><Select/></Menu.Item>
                 </SubMenu>
                 <Menu.Item>词法分析</Menu.Item>
                 <Menu.Item>语法分析</Menu.Item>
+                <Menu.Item>中间代码生成</Menu.Item>
+                <Menu.Item>目标代码生成</Menu.Item>
             </Menu>
         </div>
     );
