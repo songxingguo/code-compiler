@@ -1,7 +1,5 @@
-#app .logo {
-  width: 120px;
-  height: 31px;
-  background: rgba(255,255,255,.2);
-  margin: 16px 24px 16px 0;
-  float: left;
+.gutter-box {
+  background: #00A0E9;
+  height: 300px;
+  padding: 5px 0;
 }

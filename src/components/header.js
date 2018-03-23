@@ -1,6 +1,7 @@
  import React, { Component } from 'react'
 import { Menu, Icon } from 'antd'
  import  './header.css'
+ import Select from './select.js'
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
@@ -20,7 +21,9 @@ class Header extends React.Component {
             <div className="logo" />
             <Menu mode="horizontal">
                 <Menu.Item>首页</Menu.Item>
-                <Menu.Item>编译</Menu.Item>
+                <SubMenu title="读取源程序">
+                    <Menu.Item><Select/></Menu.Item>
+                </SubMenu>
                 <Menu.Item>词法分析</Menu.Item>
                 <Menu.Item>语法分析</Menu.Item>
             </Menu>
@@ -28,6 +31,5 @@ class Header extends React.Component {
     );
   }
 }
-
 
 export default Header;
